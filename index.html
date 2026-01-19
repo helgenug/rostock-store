@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Title -->
+    <title>Rostock Edition | Holger Martens Fotokunst</title>
+    <meta name="description" content="Die Rostock Edition: Exklusive Wandbilder und Fine Art Fotografie von Holger Martens. Limitierte Editionen für Ihr Zuhause. Ein Projekt von Ostsee Atelier.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Styles & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Fonts */
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Lato', sans-serif; }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+
+        /* --- SLIDESHOW TECHNIK (High End Crossfade) --- */
+        /* Alle Bilder liegen übereinander */
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 2500ms ease-in-out; /* Sehr weicher Übergang (2.5s) */
+        }
+
+        /* Das aktive Bild ist sichtbar */
+        .slide.active {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        /* Das vorherige Bild bleibt kurz sichtbar, damit kein "Loch" entsteht */
+        .slide.last-active {
+            opacity: 1;
+            z-index: 9;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#1a1a1a] m-0 p-0 overflow-x-hidden">
+
+    <!-- HERO SECTION -->
+    <header class="relative w-full h-[100vh] flex flex-col items-center justify-center bg-[#f0f0f0] overflow-hidden">
+        
+        <!-- Hintergrund -->
+        <!-- WICHTIG: Jetzt auf .png geändert! -->
+        <div class="absolute inset-0 z-0 bg-cover bg-no-repeat transform scale-105 transition-transform duration-[60s] ease-out"
+             style="background-image: url(./zimmer.png); background-position: center bottom; background-color: #e5e5e5;">
+        </div>
+
+        <!-- Navigation -->
+        <nav class="absolute top-0 w-full px-8 pt-6 pb-8 md:px-12 md:pt-6 md:pb-12 z-40 flex justify-between items-start mix-blend-multiply">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-serif tracking-tight text-black leading-none">
+                    ROSTOCK<span class="font-sans font-light text-lg md:text-xl ml-1 opacity-60">.STORE</span>
+                </h1>
+            </div>
+            <div class="text-right hidden md:block">
+                <p class="font-sans text-xs tracking-[0.2em] uppercase font-bold text-black/70">Holger Martens</p>
+                <p class="font-serif italic text-black/50 text-sm">Fine Art Photography</p>
+            </div>
+        </nav>
+
+        <!-- THE FRAME -->
+        <!-- POSITION UPDATE: md:translate-x-[3vw] (war vorher 8vw) -> weiter links Richtung Logo -->
+        <div id="frame-container" class="relative z-20 w-[80vw] md:w-[45vw] lg:w-[35vw] aspect-[3/2] mt-[-15vh] md:mt-[-28vh] md:translate-x-[3vw] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] opacity-0 translate-y-8 transition-all duration-1500 ease-out">
+            
+            <!-- LAYER 1: Slideshow Wrapper -->
+            <div class="absolute inset-[30px] md:inset-[60px] bg-gray-200 overflow-hidden z-0">
+                <!-- Bild 1 (Startbild) -->
+                <img src="oooo.jpg" class="slide active" alt="Rostock">
+                
+                <!-- Bild 2 -->
+                <img src="D5D_3667.jpg" class="slide" alt="Warnemünde sturm leuchtturm">
+                
+                <!-- Bild 3 -->
+                <img src="MZ8_4006.jpg" class="slide" alt="Leuchtturm">
+                
+                <!-- Bild 4 -->
+                <img src="DHM_9394.jpg" class="slide" alt="Teepott">
+            </div>
+
+            <!-- LAYER 2: Passepartout (Overlay) -->
+            <div class="absolute inset-0 border-[30px] md:border-[60px] border-white z-10 pointer-events-none"></div>
+
+            <!-- LAYER 3: Rahmen (Overlay) -->
+            <div class="absolute -inset-[2px] border-[12px] border-[#111] z-20 pointer-events-none"></div>
+
+            <!-- LAYER 4: Glas-Reflexion -->
+            <div class="absolute inset-[30px] md:inset-[60px] bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-40 z-30 pointer-events-none"></div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 z-30 mix-blend-multiply">
+            <span class="font-sans text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+            <div class="w-[1px] h-12 bg-black"></div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="bg-white relative z-10">
+        <!-- Intro -->
+        <section class="max-w-screen-xl mx-auto px-6 py-32 md:py-48 flex flex-col md:flex-row gap-16 md:gap-32 items-end border-b border-black/5">
+            <div class="flex-1">
+                <h2 class="text-5xl md:text-7xl lg:text-8xl font-serif leading-[0.9] text-black mb-8">
+                    Die Stille <br/><span class="italic text-black/40">der Küste.</span>
+                </h2>
+            </div>
+            <div class="flex-1 max-w-lg pb-2">
+                <p class="font-sans text-lg md:text-xl font-light leading-relaxed text-black/80">
+                    Holger Martens fängt nicht einfach nur Bilder ein. Er kuratiert Momente der Ruhe in einer lauten Welt. 
+                    Großformatige Kunstwerke für Räume, die atmen wollen.
+                </p>
+                <div class="mt-8 flex items-center gap-4 text-sm font-bold tracking-widest uppercase">
+                    <span class="w-12 h-[1px] bg-black"></span>
+                    <span>Rostock Edition</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artist Profile -->
+        <section class="max-w-screen-xl mx-auto px-6 py-32">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-4 space-y-16">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 text-black/40">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            <span class="font-sans text-xs font-bold tracking-widest uppercase">Standort</span>
+                        </div>
+                        <p class="font-serif text-2xl">Rostock,<br/>Mecklenburg-Vorpommern</p>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 text-black/40">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                            <span class="font-sans text-xs font-bold tracking-widest uppercase">Qualität</span>
+                        </div>
+                        <p class="font-serif text-2xl">Museumsqualität.<br/>Acrylglas & Alu-Dibond.</p>
+                    </div>
+                </div>
+                <div class="md:col-span-7 md:col-start-6">
+                    <p class="font-serif text-3xl md:text-4xl leading-tight mb-12 text-black/90">
+                        "Fotografie ist für mich mehr als Technik. Es ist der Versuch, die Zeit anzuhalten, wenn das Licht die Architektur des Nordens berührt."
+                    </p>
+                    <div class="font-sans text-black/60 leading-loose space-y-6 columns-1 md:columns-2 gap-12 text-sm md:text-base text-justify">
+                        <p>
+                            Als etablierter Künstler und Vordenker versteht Holger Martens die Wirkung von Bildern im Raum. Seine Werke sind keine Dekoration, sondern architektonische Elemente, die Wohnräumen und Büros eine neue Dimension verleihen.
+                        </p>
+                        <p>
+                            Jedes Werk wird individuell gefertigt. Keine Lagerware, keine Kompromisse. Der Fokus liegt auf der absoluten Klarheit der Motive – von der Warnemünder Mole bis zur graphischen Strenge des Teepotts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#111] text-white py-32 px-6">
+            <div class="max-w-screen-xl mx-auto text-center">
+                <h3 class="font-serif text-4xl md:text-5xl mb-12 italic opacity-80">Interessiert an einem Unikat?</h3>
+                <a href="https://www.ostsee-atelier.com" target="_blank" rel="me noopener noreferrer"
+                   class="group inline-flex items-center gap-4 border border-white/20 px-12 py-6 hover:bg-white hover:text-black transition-all duration-500">
+                    <span class="font-sans text-sm tracking-[0.3em] uppercase font-bold">Zum Portfolio</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300"></i>
+                </a>
+                
+                <div class="mt-32 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-white/30 font-sans tracking-widest uppercase gap-6">
+                    <span>© <span id="year"></span> Holger Martens</span>
+                    <div class="flex gap-8">
+                        <button onclick="openModal('modal-impressum')" class="hover:text-white transition-colors uppercase tracking-widest">Impressum</button>
+                        <button onclick="openModal('modal-agb')" class="hover:text-white transition-colors uppercase tracking-widest">AGB</button>
+                        <button onclick="openModal('modal-datenschutz')" class="hover:text-white transition-colors uppercase tracking-widest">Datenschutz</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Modals (Inhalt wie zuvor) -->
+    <div id="modal-impressum" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal('modal-impressum')"></div>
+        <div class="absolute right-0 top-0 h-full w-full md:w-[600px] bg-white p-12 md:p-24 overflow-y-auto shadow-2xl">
+            <button onclick="closeModal('modal-impressum')" class="absolute top-8 right-8 text-black/50 hover:text-black"><i data-lucide="x" class="w-8 h-8"></i></button>
+            <h2 class="font-serif text-3xl mb-8">Impressum</h2>
+            <div class="font-sans text-sm leading-relaxed text-gray-600 space-y-4">
+                <p><strong>Angaben gemäß § 5 DDG:</strong><br>
+                Firma/Organisation: Holger Martens Fotografie & Bildkunst<br>
+                Holger Martens<br>
+                Dehmelstraße 7<br>
+                18055 Rostock<br>
+                Deutschland</p>
+                <p><strong>Kontakt:</strong><br>E-Mail: fotograf@holger-martens.com<br>Telefon: 0170 799 19 10 / 0381 290 61 45</p>
+                <p><strong>Umsatzsteuer-ID:</strong><br>81760243197</p>
+                <p><strong>Inhaber / Vertretungsberechtigter:</strong><br>Holger Martens</p>
+                <p>Das OSTSEE ATELIER befindet sich auch als Ausstellungsraum im Lillebo Rostock (Schwaansche Straße 1, Rostock) sowie bei Heinrich Hünicke in Rostock (Schutower Ringstraße 1, 18069 Rostock).</p>
+                <h3 class="font-bold text-black mt-6">Haftung für Inhalte und Links</h3>
+                <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+                <h3 class="font-bold text-black mt-6">Urheberrecht</h3>
+                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke in diesem Shop unterliegen dem deutschen Urheberrecht.</p>
+                <h3 class="font-bold text-black mt-6">Streitbeilegung</h3>
+                <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: http://ec.europa.eu/consumers/odr/</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-agb" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal('modal-agb')"></div>
+        <div class="absolute right-0 top-0 h-full w-full md:w-[600px] bg-white p-12 md:p-24 overflow-y-auto shadow-2xl">
+            <button onclick="closeModal('modal-agb')" class="absolute top-8 right-8 text-black/50 hover:text-black"><i data-lucide="x" class="w-8 h-8"></i></button>
+            <h2 class="font-serif text-3xl mb-8">AGB</h2>
+            <div class="font-sans text-sm leading-relaxed text-gray-600 space-y-4">
+                <h3 class="font-bold text-black">§ 1 Geltungsbereich</h3>
+                <p>Diese AGB gelten für die Rechtsbeziehung zwischen Holger Martens Fotografie & Bildkunst und dem Kunden.</p>
+                <h3 class="font-bold text-black">§ 2 Vertragsschluss</h3>
+                <p>Angebote sind freibleibend. Vertrag kommt durch Versand zustande.</p>
+                <h3 class="font-bold text-black">§ 3 Zahlung</h3>
+                <p>Vorkasse.</p>
+                <h3 class="font-bold text-black">§ 5 Widerrufsrecht</h3>
+                <p>Kein Widerrufsrecht bei Kundenspezifikationen (§ 312d Abs. 4 BGB).</p>
+                <h3 class="font-bold text-black">§ 8 Rechte</h3>
+                <p>Nur private Nutzung gestattet.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-datenschutz" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal('modal-datenschutz')"></div>
+        <div class="absolute right-0 top-0 h-full w-full md:w-[600px] bg-white p-12 md:p-24 overflow-y-auto shadow-2xl">
+            <button onclick="closeModal('modal-datenschutz')" class="absolute top-8 right-8 text-black/50 hover:text-black"><i data-lucide="x" class="w-8 h-8"></i></button>
+            <h2 class="font-serif text-3xl mb-8">Datenschutz</h2>
+            <div class="font-sans text-sm leading-relaxed text-gray-600 space-y-4">
+                <p><strong>Verantwortlich:</strong> Holger Martens Fotografie & Bildkunst.</p>
+                <h3 class="font-bold text-black">Allgemeines</h3>
+                <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst.</p>
+                <h3 class="font-bold text-black">Google Analytics</h3>
+                <p>Diese Website benutzt Google Analytics.</p>
+                <p>Kontakt: info@holger-martens.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Icons
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+            
+            // 2. Footer Jahr
+            const yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // 3. Frame Animation (Fade In)
+            const frame = document.getElementById('frame-container');
+            setTimeout(() => {
+                if(frame) {
+                    frame.classList.remove('opacity-0', 'translate-y-8');
+                    frame.classList.add('opacity-100', 'translate-y-0');
+                }
+            }, 100);
+
+            // 4. SLIDESHOW LOGIK (The real deal)
+            const slides = document.querySelectorAll('.slide');
+            let currentIdx = 0;
+
+            if (slides.length > 1) {
+                setInterval(() => {
+                    const activeSlide = slides[currentIdx];
+                    const nextIdx = (currentIdx + 1) % slides.length;
+                    const nextSlide = slides[nextIdx];
+
+                    // Altes Bild bekommt 'last-active' (liegt unter dem neuen)
+                    activeSlide.classList.remove('active');
+                    activeSlide.classList.add('last-active');
+
+                    // Neues Bild bekommt 'active' (blendet darüber ein)
+                    nextSlide.classList.add('active');
+                    nextSlide.classList.remove('last-active');
+
+                    // Clean-up: Nach der Transition das 'last-active' vom alten Bild entfernen
+                    setTimeout(() => {
+                        activeSlide.classList.remove('last-active');
+                    }, 2500); // Muss der CSS Transition Time entsprechen
+
+                    currentIdx = nextIdx;
+                }, 5000); // 5 Sekunden Pause
+            }
+        });
+
+        // 5. Modals
+        window.openModal = (id) => {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        window.closeModal = (id) => {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
