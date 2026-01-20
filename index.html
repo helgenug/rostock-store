@@ -72,6 +72,9 @@
             opacity: 0;
             z-index: 0;
             transition: opacity 2500ms ease-in-out;
+            /* FIX: Versteckt den Alt-Text visuell, falls Bild lädt oder fehlt */
+            color: transparent; 
+            text-indent: -10000px;
         }
 
         .slide.active {
@@ -111,8 +114,7 @@
         <!-- THE FRAME -->
         <div id="frame-container" class="relative z-20 w-[80vw] md:w-[45vw] lg:w-[35vw] aspect-[3/2] mt-[-15vh] md:mt-[-28vh] md:translate-x-[3vw] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] opacity-0 translate-y-8 transition-all duration-1500 ease-out">
             
-            <!-- LAYER 1: Slideshow Wrapper (JETZT KLICKBAR) -->
-            <!-- Wir nutzen hier ein <a> Tag statt div, damit man klicken kann -->
+            <!-- LAYER 1: Slideshow Wrapper (KLICKBAR) -->
             <a href="https://www.ostsee-atelier.com/2761190" target="_blank" rel="noopener noreferrer" 
                class="absolute inset-[30px] md:inset-[60px] bg-gray-200 overflow-hidden z-0 block cursor-pointer group">
                 
@@ -146,11 +148,11 @@
                 <!-- 10. Platzhalter -->
                 <img src="MZ7_1729.jpg" class="slide" alt="Rostock Impression 10">
 
-                <!-- Hover Effekt (Optional: Leichter Zoom beim Mauszeiger) -->
+                <!-- Hover Effekt (Leichter Zoom beim Mauszeiger) -->
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 z-50"></div>
             </a>
 
-            <!-- LAYER 2: Passepartout (Overlay - Klick geht durch dank pointer-events-none) -->
+            <!-- LAYER 2: Passepartout (Overlay - Klick geht durch) -->
             <div class="absolute inset-0 border-[30px] md:border-[60px] border-white z-10 pointer-events-none"></div>
 
             <!-- LAYER 3: Rahmen (Overlay - Klick geht durch) -->
@@ -247,7 +249,7 @@
         </footer>
     </main>
 
-    <!-- Modals (Inhalt wie zuvor) -->
+    <!-- Modals -->
     <div id="modal-impressum" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal('modal-impressum')"></div>
         <div class="absolute right-0 top-0 h-full w-full md:w-[600px] bg-white p-12 md:p-24 overflow-y-auto shadow-2xl">
