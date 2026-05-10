@@ -2,8 +2,16 @@
 # robots.txt – rostock.store
 # Holger Martens – Rostock Sondereditionen
 # ============================================================
+# Strategie:
+#   - Klassische Suchmaschinen: voller Zugriff
+#   - KI-Search-Bots (Live-Retrieval): zugelassen
+#   - KI-Training-Bots: blockiert
+# Hintergrund: Werke der Rostock Sonderedition sind C2PA-signiert
+# und urheberrechtlich geschützt. Nutzung für KI-Training ist
+# ausgeschlossen. Auffindbarkeit in KI-Suchantworten bleibt.
+# ============================================================
 
-# ---- Suchmaschinen: voller Zugriff ----
+# ---- Klassische Suchmaschinen ----
 User-agent: Googlebot
 Allow: /
 
@@ -16,70 +24,105 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# ---- Standard für alle übrigen seriösen Crawler ----
-User-agent: *
+# ============================================================
+# KI-SEARCH / LIVE-RETRIEVAL: zugelassen
+# Diese Bots holen Inhalte live, wenn jemand in ChatGPT,
+# Claude, Perplexity, You.com oder DuckDuckGo nach Holger
+# Martens oder den Rostock Sondereditionen sucht.
+# ============================================================
+
+# OpenAI ChatGPT Search
+User-agent: OAI-SearchBot
 Allow: /
-Disallow: /modal-
-Disallow: /*?*
+
+# OpenAI – User-getriggerte Abrufe (wenn ein Nutzer ChatGPT
+# explizit auf eine Seite verweist)
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic Claude Live-Suche läuft über Brave Search
+User-agent: Brave-Bot
+Allow: /
+
+# DuckDuckGo AI Assist
+User-agent: DuckAssistBot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Perplexity (nutzt einen Bot für Search und Training –
+# bewusst zugelassen, da Sichtbarkeit wichtiger als
+# Trainings-Schutz auf einer kuratierten Mikrosite)
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
 
 # ============================================================
-# KI-Crawler / LLM-Trainings-Bots: blockiert.
-# Die Werke der Rostock Sonderedition sind urheberrechtlich
-# geschützt. Eine Nutzung für KI-Training ist ausgeschlossen.
+# KI-TRAINING-BOTS: blockiert
+# Werke der Rostock Sonderedition sind nicht für die
+# Verwendung in KI-Trainingsdaten freigegeben.
 # ============================================================
 
+# OpenAI Training
 User-agent: GPTBot
 Disallow: /
 
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: OAI-SearchBot
-Disallow: /
-
+# Google Gemini Training (separat vom regulären Googlebot)
 User-agent: Google-Extended
 Disallow: /
 
+# Anthropic Training
 User-agent: ClaudeBot
-Disallow: /
-
-User-agent: Claude-Web
 Disallow: /
 
 User-agent: anthropic-ai
 Disallow: /
 
+# Common Crawl – füttert viele LLMs
 User-agent: CCBot
 Disallow: /
 
-user-agent: PerplexityBot
-Disallow: /
-
-User-agent: Perplexity-User
-Disallow: /
-
+# Apple Intelligence Training
 User-agent: Applebot-Extended
 Disallow: /
 
+# Amazon
 User-agent: Amazonbot
 Disallow: /
 
+# ByteDance / TikTok
 User-agent: Bytespider
 Disallow: /
 
+# Meta AI Training
 User-agent: Meta-ExternalAgent
 Disallow: /
 
 User-agent: FacebookBot
 Disallow: /
 
+# Cohere
 User-agent: cohere-ai
 Disallow: /
 
 User-agent: cohere-training-data-crawler
 Disallow: /
 
-User-agent: DuckAssistBot
+# Diverse Daten-Aggregatoren
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: Timpibot
 Disallow: /
 
 User-agent: omgili
@@ -88,20 +131,14 @@ Disallow: /
 User-agent: omgilibot
 Disallow: /
 
-User-agent: Diffbot
-Disallow: /
-
-User-agent: ImagesiftBot
-Disallow: /
-
 User-agent: PiplBot
 Disallow: /
 
-User-agent: AI2Bot
-Disallow: /
-
-User-agent: Timpibot
-Disallow: /
+# ---- Standard für alle übrigen Crawler ----
+User-agent: *
+Allow: /
+Disallow: /modal-
+Disallow: /*?*
 
 # ============================================================
 # Sitemap
