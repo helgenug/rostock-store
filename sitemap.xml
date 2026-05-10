@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <url>
+        <loc>https://www.rostock.store/</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+
+        <!-- Bilder der Rostock Sonderedition -->
+        <image:image>
+            <image:loc>https://www.rostock.store/oooo.jpg</image:loc>
+            <image:title>Rostock Stadthafen</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild auf Acrylglas oder Alu-Dibond.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/D5D_3667.jpg</image:loc>
+            <image:title>Warnemünde Sturm am Leuchtturm</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/MZ7_0628_2500px.jpg</image:loc>
+            <image:title>Leuchtturm Warnemünde</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/DHM_9394.jpg</image:loc>
+            <image:title>Teepott Warnemünde</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, Architektur der Küste.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/0HM_2421-Verbessert.jpg</image:loc>
+            <image:title>Warnemünde Mole</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/HM502746.jpg</image:loc>
+            <image:title>Rostock Hafen</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/DHM_9390.jpg</image:loc>
+            <image:title>Teepott Warnemünde Architektur</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/DHM_2698.jpg</image:loc>
+            <image:title>Warnemünde Strand</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/MZ6_9164.jpg</image:loc>
+            <image:title>Rostock Architektur</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/MZ7_1729.jpg</image:loc>
+            <image:title>Warnemünde Küste</image:title>
+            <image:caption>Rostock Sonderedition – Holger Martens, limitiertes Wandbild.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.rostock.store/zimmer.png</image:loc>
+            <image:title>Rostock Sonderedition im Wohnraum</image:title>
+            <image:caption>Großformatiges Wandbild der Rostock Sonderedition im Interieur.</image:caption>
+            <image:license>https://www.rostock.store/</image:license>
+        </image:image>
+    </url>
+
+</urlset>
